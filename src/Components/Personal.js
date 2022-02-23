@@ -11,7 +11,7 @@ const Personal = () => {
       <div key={person.id}>
         <div className="row">
           <div className="col-3">
-            <div className="bg-danger">Person</div>
+           <Header title="person"/>
 
             <div className="card" style={{ width: "18rem" }}>
               <img src={person.avatar} className="card-img-top" alt="..." />
@@ -27,10 +27,10 @@ const Personal = () => {
           </div>
 
           <div className="col-9">
-            <div className="bg-danger">Children</div>
+          <Header title="Children"/>
+          <div  className="row">
             {person.children.map((child, index) => (
-              <div key={index} className="row">
-                <div className="card" style={{ width: "18rem" }}>
+                <div className="card" key={index} style={{ width: "18rem" }}>
                   <img
                     src="https://robohash.org/inventoredolorumest.png?size=250x250&set=set1"
                     className="card-img-top"
@@ -42,13 +42,14 @@ const Personal = () => {
                     <p className="card-text">Birthday: {child.birthday}</p>
                   </div>
                 </div>
-              </div>
+             
             ))}
-
-            <div className="bg-danger">Friend</div>
+            </div>
+            <Header title="Friend"/>
+            <div className="row">
             {person.friends.map((friend, ind) => (
-              <div key={ind} className="row">
-                <div className="card" style={{ width: "18rem" }}>
+              
+                <div className="card" key={ind}  style={{ width: "18rem" }}>
                   <img
                     src="https://robohash.org/inventoredolorumest.png?size=250x250&set=set1"
                     className="card-img-top"
@@ -61,8 +62,9 @@ const Personal = () => {
                     <p className="card-text">Phone: {friend.phone}</p>
                   </div>
                 </div>
-              </div>
+             
             ))}
+            </div>
           </div>
         </div>
       </div>
