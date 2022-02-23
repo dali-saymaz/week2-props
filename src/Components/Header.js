@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Header = (props) => {
-  return (
-    <div class="bg-danger">{props.title}</div>
-  )
-}
+  return <div className="bg-danger">{props.title}</div>;
+};
 
 export default Header;
